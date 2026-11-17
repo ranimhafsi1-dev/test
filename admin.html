@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Administration — Affaryette</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body data-page="admin">
+        <header id="header">
+
+        </header>
+        <main class="wrap page">
+            <div class="page-title">
+                <span class="eyebrow">ESPACE PRIVÉ</span>
+                <h1>Administration</h1>
+                <p>Gérez les annonces et les messages de la plateforme Affaryette.</p>
+            </div>
+            <div id="adminLogin" class="auth-card admin-login">
+                <h2>Connexion administrateur</h2>
+                <form id="adminLoginForm" class="form">
+                    <label>E-mail
+                        <input name="email" type="email" required>
+                    </label>
+                    <label>Mot de passe
+                        <input name="password" type="password" required>
+                    </label>
+                    <button class="btn full">Accéder au dashboard</button>
+                </form>
+                <p class="muted">Connectez-vous avec votre compte Affaryette ayant le rôle administrateur.</p>
+                <p id="adminMessage" class="notice"></p>
+            </div>
+            <section id="adminDashboard" class="hidden">
+                <div class="stats" id="adminStats"></div>
+                <div class="section-head">
+                    <h2>Gestion des produits</h2>
+                    <button class="btn btn-outline" id="adminLogout">Déconnexion</button>
+                </div>
+                <div class="table-wrap">
+                    <table><thead><tr><th>Produit</th><th>Catégorie</th><th>Prix</th><th>Ville</th><th>Action</th></tr></thead><tbody id="adminProducts"></tbody></table></div><h2 class="subheading">Gestion des commandes</h2><div class="table-wrap"><table><thead><tr><th>Référence</th><th>Client</th><th>Ville</th><th>Total</th><th>Statut</th></tr></thead><tbody id="adminOrders"></tbody></table></div><h2 class="subheading">Messages reçus</h2><div id="adminMessages" class="messages-list"></div></section></main><footer id="footer"></footer><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/app.js"></script></body></html>
